@@ -579,6 +579,10 @@
     min-width: 20%;
   }
 
+  .post-content p:first-child {
+    font-size: var(--font-size-x-large);
+}
+
   /* Post Meta
     ============================= */
 
@@ -640,4 +644,3 @@
     color: var(--color-grey);
     text-align: center;
   }
-  
