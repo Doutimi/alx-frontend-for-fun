@@ -18,7 +18,7 @@
   @return $list;
 }
   
-// Function to compare two strings
+//Function to compare two strings
 @function str-compare($str1, $str2) {
     @if $str1 > $str2 {
       @return 1;
