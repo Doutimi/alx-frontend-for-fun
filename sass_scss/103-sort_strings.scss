@@ -18,7 +18,7 @@ $list: $list_to_sort;
     }
   }
   @return $list;
-  @debug #{$list};
+  @debug "#{$list}";
 }
   
 //Function to compare two strings
