@@ -2,20 +2,20 @@
 @import '103-sort_list';
 
 @function sort-list($list) {
-    $n: length($list);
-    @for $i from 1 through $n {
-      @for $j from 1 through $n - 1 {
-        $current: nth($list, $j);
-        $next: nth($list, $j + 1);
-        @if str-compare($current, $next) > 0 {
-          // Swap the current and next items
-          $temp: $current;
-          $list: set-nth($list, $j, $next);
-          $list: set-nth($list, $j + 1, $temp);
-        }
+  $n: length($list);
+  @for $i from 1 through $n {
+    @for $j from 1 through $n - 1 {
+      $current: nth($list, $j);
+      $next: nth($list, $j + 1);
+      @if str-compare($current, $next) > 0 {
+        // Swap the current and next items
+        $temp: $current;
+        $list: set-nth($list, $j, $next);
+        $list: set-nth($list, $j + 1, $temp);
       }
     }
-    @return $list;
+  }
+  @return $list;
 }
   
 // Function to compare two strings
